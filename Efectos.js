@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // ------------------- Cuenta Regresiva ------------------- 
 function UpdateCount() {
-    const Christmas = new Date(new Date().getFullYear(), 11, 14, 15, 35, 0);
+    const Christmas = new Date(new Date().getFullYear(), 11, 14, 16, 35, 0);
     const HoraActual = new Date();
     const cregresiva = Christmas - HoraActual;
     const dias = Math.floor(cregresiva / (1000 * 60 * 60 * 24));
