@@ -1,0 +1,364 @@
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /*background: linear-gradient(#a18cd1, #fbc2eb);*/
+    background: linear-gradient(#00111a, #00334d);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    min-height: 100vh;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    width: 100%;
+}
+
+header {
+    padding: 40px 20px;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 5em;
+    text-shadow: 2px 2px 6px #000;
+    margin-top: 0px;
+}
+
+h2 {
+    font-size: 34px
+}
+
+.arbol {
+    font-size: 80px;
+    margin-top: 20px;
+}
+
+.tarjeta {
+    margin: 30px auto;
+    max-width: 60%;
+    padding: 20px;
+    padding-bottom: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 15px rgb(255, 221, 0);
+   /* box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    background: skyblue;
+    padding: 20px;
+    max-width: 600px;
+    margin: 30px auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);*/
+}
+
+footer {
+    background: #656565;
+    color: white;
+    padding: 10px 10px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    font-size: 15px;
+}
+
+.IconPuppet{
+    font-size: 20px;
+}
+
+/* Animación de nieve */
+.snowflake {
+    position: fixed;
+    top: -10px;
+    color: white;
+    font-size: 20px;
+    pointer-events: none;
+    animation: caer linear infinite;
+    z-index: 9999;
+    user-select: none;
+}
+
+@keyframes caer {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0.8;
+    }
+}
+
+/*------Arbol-------*/
+
+.tree {
+    position: relative;
+    margin: 12px auto;
+    width: 220px;
+    height: 360px;
+}
+/* Estrella */
+.star {
+position: absolute;
+top: -35px;
+left: 50%;
+transform: translateX(-50%);
+font-size: 60px;
+color: gold;
+}
+
+#star-light{
+    animation: glow 2.5s infinite;
+    /*
+    text-shadow:
+    0 0 8px gold,
+    0 0 16px gold,
+    0 0 24px gold;*/
+}
+
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 10px gold; }
+  50% { text-shadow: 0 0 40px gold; }
+}
+
+/* Capas del árbol */
+.layer {
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+width: 0;
+height: 0;
+border-left: solid transparent;
+border-right: solid transparent;
+}
+
+
+.layer1 {
+top: 0;
+border-left-width: 70px;
+border-right-width: 70px;
+border-bottom: 90px solid #189236;
+border-radius: 20px;
+}
+
+.layer1d {
+top: -5px;
+border-left-width: 80px;
+border-right-width: 80px;
+border-bottom: 100px solid #000000;
+border-radius: 30px;
+}
+
+
+.layer2 {
+top: 0px;
+border-left-width: 100px;
+border-right-width: 100px;
+border-bottom: 160px solid #189236;
+border-radius: 20px;
+/*
+border-bottom: 160px solid #196f2f;*/
+}
+
+
+.layer2d {
+top: -5px;
+border-left-width: 110px;
+border-right-width: 110px;
+border-bottom: 172px solid #000000;
+border-radius: 32px;
+}
+
+
+.layer3 {
+top: 0px;
+border-left-width: 120px;
+border-right-width: 120px;
+border-bottom: 230px solid #189236;
+border-radius: 20px;
+}
+
+
+.layer3d {
+top: -5px;
+border-left-width: 130px;
+border-right-width: 130px;
+border-bottom: 240px solid #000000;
+border-radius: 30px;
+}
+
+
+.layer4 {
+top: 0;
+border-left-width: 140px;
+border-right-width: 140px;
+border-bottom: 300px solid #189236;
+border-radius: 40px;
+}
+
+
+.layer4d {
+top: -5px;
+border-left-width: 150px;
+border-right-width: 150px;
+border-bottom: 310px solid #000000;
+border-radius: 50px;
+}
+
+
+/* Tronco */
+.trunk {
+position: absolute;
+bottom: 0;
+left: 50%;
+transform: translateX(-50%);
+width: 50px;
+height: 90px;
+background: #c67134;
+border-radius: 6px;
+}
+
+
+.trunkd {
+    top: 275px;
+position: absolute;
+bottom: 0;
+left: 50%;
+transform: translateX(-50%);
+width: 60px;
+height: 90px;
+background: #000000;
+border-radius: 6px;
+}
+
+/* Luces */
+.lights span {
+position: absolute;
+width: 22px;
+height: 22px;
+border-radius: 50%;
+animation: blink 1.5s infinite;
+}
+
+.lights span:nth-child(1){ background:red; top:50px; left:99px; animation-delay:0s; }
+.lights span:nth-child(2){ background:yellow; top:90px; left:76px; animation-delay:.3s; }
+.lights span:nth-child(3){ background:blue; top:90px; left:123px; animation-delay:.6s; }
+
+.lights span:nth-child(4){ background:red; top:140px; left:64px; animation-delay:.2s; }
+.lights span:nth-child(5){ background:yellow; top:140px; left:139px; animation-delay:.5s; }
+
+.lights span:nth-child(6){ background:blue; top:180px; left:99px; animation-delay:.1s; }
+.lights span:nth-child(7){ background:red; top:190px; left:160px; animation-delay:.4s; }
+.lights span:nth-child(8){ background:yellow; top:200px; left:45px; animation-delay:.7s; }
+
+.lights span:nth-child(9){ background:blue; top:255px; left:35px; animation-delay:.1s; }
+.lights span:nth-child(10){ background:red; top:230px; left: 95px; animation-delay:.4s; }
+.lights span:nth-child(11){ background:yellow; top:245px; left:165px; animation-delay:.7s; }
+
+
+
+@keyframes blink {
+0%,100% { opacity: 1; box-shadow: 0 0 8px currentColor; }
+50% { opacity: 0.3; box-shadow: none; }
+}
+
+
+
+/*Mensaje Navideño*/
+#Mensaje-Titulo{
+    font-size: 38px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#Mensaje-Contenido{
+    font-size: 28px;
+    margin-top: 10px;
+}
+
+#Festejo{
+    font-size: 30px;
+}
+
+#SantaIcon{
+    font-size: 40px;
+}
+
+
+/* Tradiciones*/
+.SeccionTradiciones {
+    padding: 2rem 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.SeccionTradiciones h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--dorado);
+    margin-bottom: 3rem;
+}
+
+.ContenidoTradiciones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.TradicionInfo {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.TradicionInfo:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 25px rgba(255, 234, 3, 0.675);
+    border-color: #51ff00;
+}
+
+.TradicionInfo img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.TradicionInfo h3 {
+    color: #ffdd01;
+    padding: 1.5rem 1.5rem 0.5rem;
+    font-size: 1.4rem;
+}
+
+.TradicionInfo p {
+    padding: 0 1.5rem 1.5rem;
+    color: var(--gris-claro);
+}
+
+
+/*----------Musica Navideña -----------------*/
+.MusicCont {
+    position: relative;
+    margin: 0px auto;
+}
+.BotonMusic {
+    top: 0px;
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.BotonMusic:hover{
+    transform: scale(1.02);
+    box-shadow: 0 5px 10px rgba(255, 234, 3, 0.675);
+    border-color: #ff0000;
+    background-color: rgb(10, 193, 10);
+
+}
